@@ -29,6 +29,59 @@ We evaluate f-Cal for a wide range of robot perception tasks and datasets. In ea
 # Qualitative results:
 
 ## Object detection:
-In object detection, we observe that NLL trained models yield substantially overconfident predictions, even for cars which are occluded. While f-Cal yields low uncertainty for 
+In object detection, we observe that NLL trained models yield substantially overconfident predictions, even for cars which are occluded. While f-Cal yields low uncertainty for objects with better visibility, while it estimates higher uncertainty for occluded objects. 
+
+![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
+
+In this sequence, we show qualitatitve results for a KITTI sequence. In this temporal sequence, we could observe that f-Cal yields higher uncertainty estimates for occluded cars(on the right) which are difficult to identify, while yields confident predictions for objects with better visibility(on the left). 
+
+![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
 
 ## Depth estimation:
+
+
+
+# Code snippet
+
+Proposed loss function, f-Cal, is very simple to implement in a few lines of code. Here we provide a code snippet, implementing f-Cal, in under 30 lines of code. 
+
+```python
+
+import torch
+from numpy.random import default_rng
+from . import model ## our model to be trained
+
+dataset_name = 'my_dataset'
+dataloader = torch.utils.data.DataLoader(dataset_name) ## MxK, MxN
+inputs, gts = iter(dataloader) ## BxK, BxN
+
+## training procedure
+## forward pass
+phi = model(inputs)
+mu, b = phi ## laplace distribution has mean and location parameters
+gts, mu, b = gts.flatten(), mu.flatten(), b.flatten()
+
+## CDF of laplace distribution
+uni_var = (gts <= mu) * 0.5 * torch.exp( (gts - mu) / b ) + (gts > mu) * 0.5 * (1 - 0.5 * torch.exp(-(gts - mu) / b)
+uniform_samples = torch.clamp(uni_var, 0.0000002, 0.9999998) ## this is for numerical stability
+                                                                                
+## inverse CDF of standard normal distribution
+residuals = 0.0 + 1.0 * torch.erfinv(2 * uniform_samples - 1) * np.sqrt(2)
+                                                                                
+## constructing a chi-squared variable
+rng = default_rng()
+dof = 75	## degrees of freedom
+cs_samples = 100 ## number of chi-squared samples                                                                                
+                                 
+chi_sq_samples = []  ## this will have our chi-squared samples
+for i in range(cs_samples):
+	indices = rng.choice(len(mu), size = dof, replace = False)
+                                                                                
+chi_sq_samples = torch.stack(chi_sq_samples)
+mu1, mu2, var1, var2 = dof, chi_sq_samples.mean(), 2*dof, chi_sq_samples.var()
+                                                                                
+## loss computation
+wasserstein_loss = ((mu1 - mu2)**2 + var1 + var2 - 2*(var1*var2)**0.5)
+wasserstein_loss.backward()   
+
+```
