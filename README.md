@@ -18,7 +18,9 @@ While modern deep neural networks are performant perception modules, performance
 
 # Algorithm
 
-f-Cal is a conceptually simple algorithm which can be implemented into any standard autodifferentiation tools such as [pytorch](https://pytorch.org) or [tensorflow](https://tensorflow.org). Through probabilistic neural regressor, we get a set of predictions($\phi_i = (\mu_i, \sigma_i$)) for groundtruth $y_i$.  We construct residuals belonging to standard normal distribution, and construct chi-squared distribution to calculate f-divergence. 
+f-Cal is a conceptually simple algorithm which can be implemented into any standard autodifferentiation tools such as [pytorch](https://pytorch.org) or [tensorflow](https://tensorflow.org). Through probabilistic neural regressor, we get a set of parameters as predictions for a ground-truth.  We construct residuals belonging to standard normal distribution from these predictions and ground-truth, and construct chi-squared distribution to calculate f-divergence. 
+
+![](algorithm-gaussian.png)
 
 # Quantitative results:
 
