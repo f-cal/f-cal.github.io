@@ -2,6 +2,7 @@
 
 #### [Dhaivat Bhatt*](https://dhaivat1729.github.io/), [Kaustubh Mani*](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en), [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
 
+#### * equal contribution
 
 # About
 f-Cal is calibration method proposed to calibrate probabilistic regression networks. Typical bayesian neural networks are shown to be overconfident in their predictions. To use the predictions for downstream tasks, reliable and *calibrated* uncertainity estimates are critical. f-Cal is a straightforward loss function, which can be employed to train any probabilistic neural regressor, and obstain calibrated uncertainty estimates.
@@ -13,7 +14,7 @@ While modern deep neural networks are performant perception modules, performance
 
 ![alt text](./figures/pipeline-ICRA-dhaivat.png)
 
-**f-Cal:** We make a conceptually simple tweak to the loss function in a typical (deterministic) neural network training pipeline. In addition to the empirical risk (e.g.,L1, L2, etc.) terms, we impose a distribution matching constraint ($L_{f−Cal}$) over the error residuals  across  a  mini-batch.  By  encouraging  the  distribution  of  these  error  residuals  to  match  a  target calibrating  distribution(e.g.,Gaussian),  we  ensure  the  neural  network  predictions  are calibrated.  Compared  to  prior  approaches, most  of  which  perform  post-hoc calibration, or require large held-out calibration datasets, f-Cal does not impose an inference time overhead. f-Cal is task and architecture agnostic, and we apply it to robot perception problems such as object detection and depth estimation.
+**f-Cal:** We make a conceptually simple tweak to the loss function in a typical (deterministic) neural network training pipeline. In addition to the empirical risk (e.g.,L1, L2, etc.) terms, we impose a distribution matching constraint (<img src="https://render.githubusercontent.com/render/math?math=L_{f−Cal}">) over the error residuals  across  a  mini-batch.  By  encouraging  the  distribution  of  these  error  residuals  to  match  a  target calibrating  distribution(e.g.,Gaussian),  we  ensure  the  neural  network  predictions  are calibrated.  Compared  to  prior  approaches, most  of  which  perform  post-hoc calibration, or require large held-out calibration datasets, f-Cal does not impose an inference time overhead. f-Cal is task and architecture agnostic, and we apply it to robot perception problems such as object detection and depth estimation.
 
 # Algorithm
 
