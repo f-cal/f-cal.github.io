@@ -20,7 +20,7 @@ While modern deep neural networks are performant perception modules, performance
 
 f-Cal is a conceptually simple algorithm which can be implemented into any standard autodifferentiation tools such as [pytorch](https://pytorch.org) or [tensorflow](https://tensorflow.org). Through probabilistic neural regressor, we get a set of parameters as predictions for a ground-truth.  We construct residuals belonging to standard normal distribution from these predictions and ground-truth, and construct chi-squared distribution to calculate f-divergence. 
 
-![alt text](./figuresalgorithm-gaussian.png)
+![alt text](./figures/algorithm-gaussian.png)
 
 # Quantitative results:
 
