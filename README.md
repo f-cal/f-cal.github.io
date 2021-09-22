@@ -1,6 +1,6 @@
 # *f*-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception
 
-#### [Dhaivat Bhatt*](https://dhaivat1729.github.io/), [Kaustubh Mani*](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en), [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
+#### [Dhaivat Bhatt](https://dhaivat1729.github.io/)*, [Kaustubh Mani](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en)*, [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
 
 #### * equal contribution
 
