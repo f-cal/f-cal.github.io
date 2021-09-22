@@ -1,8 +1,6 @@
 # *f*-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception
 
-#### [Dhaivat Bhatt](https://dhaivat1729.github.io/)*, [Kaustubh Mani](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en)*, [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
-
-#### * equal contribution
+#### [Dhaivat Bhatt](https://dhaivat1729.github.io/), [Kaustubh Mani](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en), [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
 
 # About
 f-Cal is calibration method proposed to calibrate probabilistic regression networks. Typical bayesian neural networks are shown to be overconfident in their predictions. To use the predictions for downstream tasks, reliable and *calibrated* uncertainity estimates are critical. f-Cal is a straightforward loss function, which can be employed to train any probabilistic neural regressor, and obstain calibrated uncertainty estimates.
