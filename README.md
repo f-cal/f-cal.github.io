@@ -20,12 +20,13 @@ While modern deep neural networks are performant perception modules, performance
 
 f-Cal is a conceptually simple algorithm which can be implemented into any standard autodifferentiation tools such as [pytorch](https://pytorch.org) or [tensorflow](https://tensorflow.org). Through probabilistic neural regressor, we get a set of parameters as predictions for a ground-truth.  We construct residuals belonging to standard normal distribution from these predictions and ground-truth, and construct chi-squared distribution to calculate f-divergence. 
 
-![](algorithm-gaussian.png)
+![alt text](./figuresalgorithm-gaussian.png)
 
 # Quantitative results:
 
 We evaluate f-Cal for a wide range of robot perception tasks and datasets. In each column group (a, b, c, d), we report an empirical risk (deterministic performance metric such as L1, SiLog, RMSE, mAP), expected calibration errors (ECE), and negative log-likelihood. f-Cal consistently outperforms all other calibration techniques considered (lower ECE values). (**Note**: L1 scores are scaled by a factor of 1000 and ECE scores by a factor 100 for improved readability. ↓: Lower is better, ↑: Higher is better, −: Method did not scale to task/dataset) 
 
+![alt text](./figures/quantitative_results.png)
 
 # Qualitative results:
 
