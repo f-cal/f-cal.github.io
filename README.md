@@ -57,16 +57,11 @@ inputs, gts = iter(dataloader) ## BxK, BxN
 
 ## training procedure
 ## forward pass
-phi = model(inputs)
-mu, b = phi ## laplace distribution has mean and location parameters
-gts, mu, b = gts.flatten(), mu.flatten(), b.flatten()
+mu, std_dev = model(inputs) ## B x N, B x N
+gts, mu, std_dev = gts.flatten(), mu.flatten(), std_dev.flatten() ## BN x 1, BN x 1, BN x 1 
 
-## CDF of laplace distribution
-uni_var = (gts <= mu) * 0.5 * torch.exp( (gts - mu) / b ) + (gts > mu) * 0.5 * (1 - 0.5 * torch.exp(-(gts - mu) / b)
-uniform_samples = torch.clamp(uni_var, 0.0000002, 0.9999998) ## this is for numerical stability
-                                                                                
-## inverse CDF of standard normal distribution
-residuals = 0.0 + 1.0 * torch.erfinv(2 * uniform_samples - 1) * np.sqrt(2)
+## constructing residuals
+residuals = (gts - mu) / std_dev ##  BN x 1
                                                                                 
 ## constructing a chi-squared variable
 rng = default_rng()
