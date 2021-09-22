@@ -43,10 +43,9 @@ In this sequence, we show qualitatitve results for a KITTI sequence. In this tem
 
 # Code snippet
 
-Proposed loss function, f-Cal, is very simple to implement in a few lines of code. Here we provide a code snippet, implementing f-Cal, in under 30 lines of code. 
+Proposed loss function, f-Cal, is very simple to implement in a few lines of code. Here we provide a code snippet, implementing f-Cal, in under 30 lines of code. Here we implement distribution matching loss using wasserstein distance.
 
 ```python
-
 import torch
 from numpy.random import default_rng
 from . import model ## our model to be trained
@@ -64,10 +63,9 @@ gts, mu, std_dev = gts.flatten(), mu.flatten(), std_dev.flatten() ## BN x 1, BN 
 residuals = (gts - mu) / std_dev ##  BN x 1
                                                                                 
 ## constructing a chi-squared variable
-rng = default_rng()
-dof = 75	## degrees of freedom
-cs_samples = 100 ## number of chi-squared samples                                                                                
-                                 
+## random number generator, degrees of freedom(K in the paper), number of chi-squared samples 
+rng, dof, cs_samples = default_rng(), 75, 100
+                                                                     
 chi_sq_samples = []  ## this will have our chi-squared samples
 for i in range(cs_samples):
 	indices = rng.choice(len(mu), size = dof, replace = False)
