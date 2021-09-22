@@ -43,7 +43,7 @@ In this sequence, we show qualitatitve results for a KITTI sequence. In this tem
 
 # Code snippet
 
-Proposed loss function, f-Cal, is very simple to implement in a few lines of code. Here we provide a code snippet, implementing f-Cal, in under 30 lines of code. Here we implement distribution matching loss using wasserstein distance.
+Proposed loss function, f-Cal, is very simple to implement in a few lines of code. Here we provide a code snippet, implementing f-Cal, in under 30 lines of code. We implement distribution matching loss using wasserstein distance.
 
 ```python
 import torch
@@ -51,16 +51,16 @@ from numpy.random import default_rng
 from . import model ## our model to be trained
 
 dataset_name = 'my_dataset'
-dataloader = torch.utils.data.DataLoader(dataset_name) ## MxK, MxN
-inputs, gts = iter(dataloader) ## BxK, BxN
+dataloader = torch.utils.data.DataLoader(dataset_name) ## D x N, D x M
+inputs, gts = iter(dataloader) ## B x N, B x M
 
 ## training procedure
 ## forward pass
-mu, std_dev = model(inputs) ## B x N, B x N
-gts, mu, std_dev = gts.flatten(), mu.flatten(), std_dev.flatten() ## BN x 1, BN x 1, BN x 1 
+mu, std_dev = model(inputs) ## B x M, B x M
+gts, mu, std_dev = gts.flatten(), mu.flatten(), std_dev.flatten() ## BM x 1, BM x 1, BM x 1 
 
 ## constructing residuals
-residuals = (gts - mu) / std_dev ##  BN x 1
+residuals = (gts - mu) / std_dev ##  BM x 1
                                                                                 
 ## constructing a chi-squared variable
 ## random number generator, degrees of freedom(K in the paper), number of chi-squared samples 
@@ -78,3 +78,7 @@ wasserstein_loss = ((mu1 - mu2)**2 + var1 + var2 - 2*(var1*var2)**0.5)
 wasserstein_loss.backward()   
 
 ```
+
+# Additional results and technical report:
+
+We do extensive ablation about impact of our modeling assumption, perform analysis of calibration v/s accuracy tradeoff. We further define consistency and establish that calibration implies consistency and as we impose calibration constraints, we also yield consistency as a byproduct. We also show how f-Cal can be extended to non-Gaussian setups, and provide an example for Laplace distribution. More details can be found on the technical report below. 
