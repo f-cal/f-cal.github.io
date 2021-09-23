@@ -33,11 +33,11 @@ In object detection, we observe that NLL trained models yield substantially over
 
 ![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
 
-[//]:In the sequence below, we show qualitatitve results for a KITTI sequence. In this temporal sequence, we could observe that *f*-Cal yields higher uncertainty estimates for occluded cars(on the right) which are difficult to identify, while yields confident predictions for objects with better visibility(on the left). 
+// In the sequence below, we show qualitatitve results for a KITTI sequence. In this temporal sequence, we could observe that *f*-Cal yields higher uncertainty estimates for occluded cars(on the right) which are difficult to identify, while yields confident predictions for objects with better visibility(on the left). 
 
-[//]:![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
+// ![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
 
-[//]: # Depth estimation:
+// # Depth estimation:
 
 
 
