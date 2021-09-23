@@ -7,17 +7,9 @@
 
 # Abstract
 
-<!-- <img src="./figures/video-thumbnail.png" width="480" class="center">](https://youtu.be/2JVVfySNATM) -->
+<img src="./figures/video-thumbnail.png" width="480" class="center">](https://youtu.be/2JVVfySNATM)
 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/watch?v=2JVVfySNATM"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+
 
 While modern deep neural networks are performant perception modules, performance (accuracy) alone is insufficient, particularly for safety-critical robotic applications such as self-driving vehicles. Robot autonomy stacks also require these otherwise blackbox models to produce reliable and calibrated measures of confidence on their predictions. Existing approaches estimate uncertainty from these neural network perception stacks by modifying network architectures, inference procedure, or loss functions. However, in general, these method slack calibration, meaning that the predictive uncertainties do not faithfully represent the true underlying uncertainties(process noise). Our key insight is that calibration is only achieved by imposing constraints across multiple examples, such as those in a mini-batch; as opposed to existing approaches which only impose constraints per-sample, often leading to overconfident (thus miscalibrated) uncertainty estimates. By enforcing the distribution of outputs of a neural network to resemble a target distribution by minimizing an f-divergence, we obtain significantly better-calibrated models compared to prior approaches. Our approach, *f*-Cal, outperforms existing uncertainty calibration approaches on robot perception tasks such as object detection and monocular depth estimation over multiple real-world benchmarks.
 
