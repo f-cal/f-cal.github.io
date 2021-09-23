@@ -80,7 +80,7 @@ wasserstein_loss.backward()
 
 ```
 
-# Additional results and technical report:
+# Additional results and technical report
 
 We do extensive ablation about impact of our modeling assumption, perform analysis of calibration v/s accuracy tradeoff. We further define consistency and establish that calibration implies consistency and as we impose calibration constraints, we also yield consistency as a byproduct. We also show how *f*-Cal can be extended to non-Gaussian setups, and provide an example implementation for Laplace distribution. More details can be found in the following technical report.
 
@@ -89,6 +89,9 @@ We do extensive ablation about impact of our modeling assumption, perform analys
 # Code and colab notebook:
 Codes and pretrained models will be made available [here](https://github.com/f-cal/f_cal). To play around with *f*-Cal quickly, we provide a [colab notebook](https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing) for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found [here](https://github.com/f-cal/f-cal.github.io/blob/main/notebook/f_Cal_Toy_Experiment.ipynb). 
 
-# Video:
+# Video
 
 [<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM)
+
+# Correspondence
+If you need to discuss any further, or seek clarifications about the work, correspondence can be sent to [dhaivat1994@gmail.com](dhaivat1994@gmail.com) or [kaustubh3095@gmail.com](kaustubh3095@gmail.com) We would like to chat from anyone working on similar ideas.
