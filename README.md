@@ -83,11 +83,8 @@ wasserstein_loss.backward()
 
 We do extensive ablation about impact of our modeling assumption, perform analysis of calibration v/s accuracy tradeoff. We further define consistency and establish that calibration implies consistency and as we impose calibration constraints, we also yield consistency as a byproduct. We also show how *f*-Cal can be extended to non-Gaussian setups, and provide an example implementation for Laplace distribution. More details can be found in the following technical report.
 
-[<img src="./figures/paper-thumbnail.png" width="48">](https://f-cal.github.io/pdf/f-Cal-preprint.pdf)
+[<img src="./figures/paper-thumbnail.png" width="480">](https://f-cal.github.io/pdf/f-Cal-preprint.pdf)
 
-
-
-<a href="username.github.io/folder/document.pdf" target="_blank">PDF.</a>
 # Colab notebook:
 To play around with *f*-Cal quickly, we provide a ![colab notebook](https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing) for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found ![here](./notebook/f_Cal_Toy_Experiment.ipynb). 
 
