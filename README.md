@@ -86,8 +86,8 @@ We do extensive ablation about impact of our modeling assumption, perform analys
 
 [<img src="./figures/paper-thumbnail.png" width="480" class="center">](https://f-cal.github.io/pdf/f-Cal-preprint.pdf)
 
-# Colab notebook:
-To play around with *f*-Cal quickly, we provide a [colab notebook](https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing) for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found [here](https://github.com/f-cal/f-cal.github.io/blob/main/notebook/f_Cal_Toy_Experiment.ipynb). 
+# Code and colab notebook:
+Codes and pretrained models will be made available [here](https://github.com/f-cal/f_cal). To play around with *f*-Cal quickly, we provide a [colab notebook](https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing) for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found [here](https://github.com/f-cal/f-cal.github.io/blob/main/notebook/f_Cal_Toy_Experiment.ipynb). 
 
 # Video:
 
