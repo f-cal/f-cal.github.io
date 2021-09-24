@@ -1,6 +1,6 @@
 # *f*-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception
 
-#### [Dhaivat Bhatt](https://dhaivat1729.github.io/), [Kaustubh Mani](https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en), [Dishank Bansal](https://mila.quebec/en/person/dishank-bansal/), [Krishna Murthy](https://krrish94.github.io), [Hanju Lee](https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp), and [Liam Paull](http://liampaull.ca)
+#### <a href="https://dhaivat1729.github.io/" target="_blank">Dhaivat Bhatt</a>, <a href="https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en" target="_blank">Kaustubh Mani</a>, <a href="https://mila.quebec/en/person/dishank-bansal/" target="_blank">Dishank Bansal</a>, <a href="https://krrish94.github.io" target="_blank">Krishna Murthy</a>, <a href="https://www.linkedin.com/in/lee-hanju-1848323/?originalSubdomain=jp" target="_blank">Hanju Lee</a>, and <a href="http://liampaull.ca" target="_blank">Liam Paull</a>
 
 # About
 *f*-Cal is calibration method proposed to calibrate probabilistic regression networks. Typical bayesian neural networks are shown to be overconfident in their predictions. To use the predictions for downstream tasks, reliable and *calibrated* uncertainity estimates are critical. *f*-Cal is a straightforward loss function, which can be employed to train any probabilistic neural regressor, and obtain calibrated uncertainty estimates.
@@ -85,15 +85,16 @@ wasserstein_loss.backward()
 
 We do extensive ablation about impact of our modeling assumption, perform analysis of calibration v/s accuracy tradeoff. We further define consistency and establish that calibration implies consistency and as we impose calibration constraints, we also yield consistency as a byproduct. We also show how *f*-Cal can be extended to non-Gaussian setups, and provide an example implementation for Laplace distribution. More details can be found in the following technical report.
 
-[<img src="./figures/paper-thumbnail.png" width="480" class="center">](https://f-cal.github.io/pdf/f-Cal-preprint.pdf){:target="_blank"}
+<a href="https://f-cal.github.io/pdf/f-Cal-preprint.pdf" target="_blank"><img src="./figures/paper-thumbnail.png" width="480" class="center"></a>
+
 
 # Code and colab notebook:
-Codes and pretrained models will be made available [here](https://github.com/f-cal/f_cal). To play around with *f*-Cal quickly, we provide a [colab notebook](https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing) for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found [here](https://github.com/f-cal/f-cal.github.io/blob/main/notebook/f_Cal_Toy_Experiment.ipynb). 
+Codes and pretrained models will be made available  <a href="https://github.com/f-cal/f_cal" target="_blank">here</a>. To play around with *f*-Cal quickly, we provide a <a href="https://colab.research.google.com/drive/1s8B81yHvS9iYU9trVK4JTqAqlqudyePf?usp=sharing" target="_blank">colab notebook</a> for a very small toy experiment(different from the Bokeh dataset in the paper). Corresponding ipython notebook can be found <a href="https://github.com/f-cal/f-cal.github.io/blob/main/notebook/f_Cal_Toy_Experiment.ipynb" target="_blank">here</a>. 
 
 # Video
 
-<!-- <a href="https://youtu.be/2JVVfySNATM" target="_blank"><img src="./figures/video-thumbnail.png" class="center"></a>  -->
-[<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM){:target="_blank"}
+<a href="https://youtu.be/2JVVfySNATM" target="_blank"><img src="./figures/video-thumbnail.png" class="center"></a> 
+<!-- [<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM) -->
 
 # Correspondence
 If you need to discuss any further, or seek clarifications about the work, correspondence can be sent to [dhaivat1994@gmail.com](dhaivat1994@gmail.com) or [kaustubh3095@gmail.com](kaustubh3095@gmail.com) We would like to chat from anyone working on similar ideas.
