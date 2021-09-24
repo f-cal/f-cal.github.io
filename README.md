@@ -70,7 +70,7 @@ rng, dof, cs_samples = default_rng(), 75, 100
 chi_sq_samples = []  ## this will have our chi-squared samples
 for i in range(cs_samples):
 	indices = rng.choice(len(mu), size = dof, replace = False)
-    chi_sq_samples.append((residuals[indices]**2).sum())
+	chi_sq_samples.append((residuals[indices]**2).sum())
 
 chi_sq_samples = torch.stack(chi_sq_samples)
 mu1, mu2, var1, var2 = dof, chi_sq_samples.mean(), 2*dof, chi_sq_samples.var()
