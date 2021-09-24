@@ -92,7 +92,8 @@ Codes and pretrained models will be made available [here](https://github.com/f-c
 
 # Video
 
-[<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM)
+<a href="https://youtu.be/2JVVfySNATM" target="_blank"><img src="./figures/video-thumbnail.png" class="center"></a> 
+<!-- [<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM) -->
 
 # Correspondence
 If you need to discuss any further, or seek clarifications about the work, correspondence can be sent to [dhaivat1994@gmail.com](dhaivat1994@gmail.com) or [kaustubh3095@gmail.com](kaustubh3095@gmail.com) We would like to chat from anyone working on similar ideas.
