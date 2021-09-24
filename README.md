@@ -34,9 +34,9 @@ In object detection, we observe that NLL trained models yield substantially over
 
 ![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png)
 
-<!-- In the sequence below, we show qualitatitve results for a KITTI sequence. In this temporal sequence, we could observe that *f*-Cal yields higher uncertainty estimates for occluded cars(on the right) which are difficult to identify, while yields confident predictions for objects with better visibility(on the left).  -->
+In the sequence below, we show qualitatitve results for a KITTI sequence. In this temporal sequence, we could observe that *f*-Cal yields higher uncertainty estimates for occluded cars(on the right) which are difficult to identify, while yields confident predictions for objects with better visibility(on the left). 
 
-<!-- ![alt text](./figures/qualitative_result_f_cal-KITTI-OD.png) -->
+![alt text](./figures/f_cal_od_gif1.gif)
 
 <!-- # Depth estimation: -->
 
@@ -70,7 +70,8 @@ rng, dof, cs_samples = default_rng(), 75, 100
 chi_sq_samples = []  ## this will have our chi-squared samples
 for i in range(cs_samples):
 	indices = rng.choice(len(mu), size = dof, replace = False)
-                                                                                
+    chi_sq_samples.append((residuals[indices]**2).sum())
+
 chi_sq_samples = torch.stack(chi_sq_samples)
 mu1, mu2, var1, var2 = dof, chi_sq_samples.mean(), 2*dof, chi_sq_samples.var()
                                                                                 
