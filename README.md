@@ -96,5 +96,18 @@ Codes and pretrained models will be made available  <a href="https://github.com/
 <a href="https://youtu.be/2JVVfySNATM" target="_blank"><img src="./figures/video-thumbnail.png" class="center"></a> 
 <!-- [<img src="./figures/video-thumbnail.png" class="center">](https://youtu.be/2JVVfySNATM) -->
 
+# Citing us:
+To cite f-Cal, you could use the following BibTeX entry
+
+```
+@article{f-Cal,
+    author  = { Dhaivat Bhatt, Kaustubh Mani, Dishank Bansal, Krishna Murthy, Hanju Lee, Liam Paull },
+    title   = { f-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception},
+    journal = { arXiv:2109.13913 },
+    year    = { 2021 },
+}
+```
+
+
 # Correspondence
 If you need to discuss any further, or seek clarifications about the work, correspondence can be sent to [dhaivat1994@gmail.com](dhaivat1994@gmail.com) or [kaustubh3095@gmail.com](kaustubh3095@gmail.com) We would like to chat from anyone working on similar ideas.
