@@ -101,10 +101,10 @@ To cite f-Cal, you could use the following BibTeX entry
 
 ```
 @article{f-Cal,
-    author  = { Dhaivat Bhatt, Kaustubh Mani, Dishank Bansal, Krishna Murthy, Hanju Lee, Liam Paull },
-    title   = { f-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception},
-    journal = { arXiv:2109.13913 },
-    year    = { 2021 },
+  title={$ f $-Cal: Calibrated aleatoric uncertainty estimation from neural networks for robot perception},
+  author={Bhatt, Dhaivat and Mani, Kaustubh and Bansal, Dishank and Murthy, Krishna and Lee, Hanju and Paull, Liam},
+  journal={arXiv preprint arXiv:2109.13913},
+  year={2021}
 }
 ```
 
